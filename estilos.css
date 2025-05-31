@@ -1,0 +1,267 @@
+* Fuente general y estilo base */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfaf9;
+  color: #3c3c3c;
+}
+
+/* Encabezado */
+header {
+  background-color: #4c1f2d;
+  color: #ffffff;
+  padding: 20px 30px;
+  text-align: center;
+}
+
+header img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  margin: 10px 0;
+  font-size: 28px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffc4c4;
+}
+
+/* Secciones */
+main {
+  padding: 40px 60px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+h2 {
+  font-size: 26px;
+  color: #4c1f2d;
+  border-bottom: 2px solid #4c1f2d;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+/* Contacto con línea inferior */
+#contacto {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+}
+
+/* Contenido alineado: imagen + texto */
+.seccion-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.seccion-flex img {
+  flex: 1 1 300px;
+  max-width: 350px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(76, 31, 45, 0.2);
+}
+
+.seccion-flex p,
+.seccion-flex ul {
+  flex: 2 1 500px;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Estilo para listas */
+.seccion-flex ul {
+  padding-left: 20px;
+}
+
+.seccion-flex ul li {
+  margin-bottom: 12px;
+}
+
+/* Formulario */
+#formulario-contacto {
+  margin-top: 10px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(76, 31, 45, 0.1);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#formulario-contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#formulario-contacto label {
+  font-weight: bold;
+  color: #4c1f2d;
+}
+
+#formulario-contacto input,
+#formulario-contacto textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+#formulario-contacto button {
+  background-color: #4c1f2d;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#formulario-contacto button:hover {
+  background-color: #722f45;
+}
+
+/* Pie de página */
+footer {
+  background-color: #4c1f2d;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* Adaptabilidad para pantallas medianas */
+@media (max-width: 768px) {
+  .seccion-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    background-color: #4c1f2d;
+    padding: 10px;
+    border-radius: 5px;
+    gap: 15px;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .seccion-flex img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #formulario-contacto {
+    padding: 20px;
+    margin-top: 10px;
+  }
+}
+
+/* Adaptabilidad para pantallas pequeñas */
+@media (max-width: 500px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  header img {
+    width: 60px;
+  }
+
+  .seccion-flex p,
+  .seccion-flex ul {
+    font-size: 15px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 15px;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  nav ul {
+    gap: 10px;
+  }
+
+  #formulario-contacto {
+    padding: 15px;
+    margin-top: 10px !important;
+  }
+}
+
+/* Pantallas muy pequeñas (320px o menos) */
+@media (max-width: 320px) {
+  body {
+    font-size: 14px;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+
+  nav ul {
+    gap: 8px;
+  }
+
+  .seccion-flex p,
+  .seccion-flex ul {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  #formulario-contacto {
+    padding: 10px;
+    margin-top: 10px !important;
+  }
+}
